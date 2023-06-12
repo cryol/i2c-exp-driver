@@ -18,6 +18,9 @@
 #include <stdint.h>
 #include <errno.h>
 
+#include <main-onion-debug.h>
+
+
 #define I2C_DEV_PATH		"/dev/i2c-%d"
 #define I2C_PRINT_BANNER	"onion-i2c::"
 
