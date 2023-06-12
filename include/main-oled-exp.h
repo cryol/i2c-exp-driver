@@ -7,7 +7,6 @@
 #include <math.h>
 #include <unistd.h>
 
-#include <onion-i2c.h>
 
 // Constants
 #define OLED_EXP_ADDR 					0x3C
@@ -238,15 +237,7 @@ static const uint8_t asciiTable[][OLED_EXP_CHAR_LENGTH] = {
     {0x4e, 0x31, 0x11, 0x11, 0x7f, 0x00},
 };
 
-// Variables
-int 	_vccState;
-int 	_memoryMode;
-
-int 	_buffer[OLED_EXP_WIDTH * OLED_EXP_PAGES];
-int 	_cursor;
-
-int 	_cursorInRow;
-int 	_bColumnsSetForText;
+void 	onionPrint 				(int severity, const char* msg, ...);
 
 #ifdef __cplusplus
 extern "C" {
@@ -298,6 +289,8 @@ int 		oledPrintChar 				(char c);
 int 		oledLineScroll 				();
 int 		oledNewLine 				();
 int 		oledPrintLine 				();
+
+
 
 #ifdef __cplusplus
 }
