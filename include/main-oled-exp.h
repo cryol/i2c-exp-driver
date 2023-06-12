@@ -7,6 +7,7 @@
 #include <math.h>
 #include <unistd.h>
 
+#include <amin-onion-debug.h>
 
 // Constants
 #define OLED_EXP_ADDR 					0x3C
@@ -237,8 +238,6 @@ static const uint8_t asciiTable[][OLED_EXP_CHAR_LENGTH] = {
     {0x4e, 0x31, 0x11, 0x11, 0x7f, 0x00},
 };
 
-void 	onionPrint 				(int severity, const char* msg, ...);
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -289,8 +288,6 @@ int 		oledPrintChar 				(char c);
 int 		oledLineScroll 				();
 int 		oledNewLine 				();
 int 		oledPrintLine 				();
-
-
 
 #ifdef __cplusplus
 }
