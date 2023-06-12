@@ -7,7 +7,7 @@
 #include <math.h>
 #include <unistd.h>
 
-#include <amin-onion-debug.h>
+#include <main-onion-debug.h>
 
 // Constants
 #define OLED_EXP_ADDR 					0x3C
